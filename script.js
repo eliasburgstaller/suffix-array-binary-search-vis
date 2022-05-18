@@ -127,7 +127,7 @@ function _stopBinarySearch() {
 // burgburschenbur : pattern:bu
 
 function _doNextSearchStep() {
-    if (gL >= gM && !gFoundIndex) {
+    if (gL >= gR && !gFoundIndex) {
         // binary search has finished
         elLcpCase.innerHTML = 'PATTERN NOT FOUND!';
         return;
