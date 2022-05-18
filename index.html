@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Suffix Array</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Binäre Suche in Suffix Arrays</h1>
+        <h2>Interaktive Visualisierung</h2>
+        <h3>Elias Burgstaller, FH Salzburg</h3>
+    </header>
+
+    <div id="controls">
+        <label for="searchtext"> Suchtext: </label>
+        <input type="text" id="searchtext" />
+        <label for="searchpattern"> Suchmuster: </label>
+        <input type="text" id="searchpattern" />
+        <button id="start-stop-button" onclick="handleStartStopButtonClicked()">Start</button>
+        <button id="next-step-button" onclick="handleNextStepButtonClicked()" hidden>Weiter</button>
+    </div>
+
+    <div id="binary-search">
+        <div id="suffix-array">
+            Suffix Array (Suchtext & Suchmuster eingeben und "Start" drücken)
+            <table id="suffix-array-table">
+                <tr>
+                    <th>S</th>
+                    <th>SA</th>
+                    <th>Index</th>
+                    <th>Suffix</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="suffix-array-lcps">
+            <div class="lcp-header">
+                <div id="lcp-h-PL" class="lcp-green"></div>
+                <div id="lcp-h-LM" class="lcp-blue"></div>
+            </div>
+            <div class="lcp-container">
+                <div id="lcp-PL"></div>
+                <div id="lcp-LM"></div>
+            </div>
+            <div style="height: 24px;"></div>
+            <div class="lcp-header">
+                <div id="lcp-h-MR" class="lcp-blue"></div>
+                <div id="lcp-h-PR" class="lcp-green"></div>
+            </div>
+            <div class="lcp-container">
+                <div id="lcp-MR"></div>
+                <div id="lcp-PR"></div>
+            </div>
+
+            <div id="lcp-case"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="p5.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
